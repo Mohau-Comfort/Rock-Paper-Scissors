@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Rock Papers Scissors</title>
+    <link href="assets/img/RPS-Logo.ico" rel="icon">
+    <link href="assets/img/RPS-Logo.png" rel="apple-touch-icon">
+    <link href="assets/Game/style.css" rel="stylesheet">
+</head>
+
+<body>
+<header>
+    <img src="assets/img/RPS-Logo.png" alt="Rock Paper Scissors Logo" class="logo"> 
+    <h1>Rock Paper Scissors</h1>
+</header>
+ <div class="score-board">
+        <div id="user-label" class="badge"></div> <!-- Name of user will come from the user -->
+        <div id="computer-label" class="badge">Computer</div>
+        <span id="user-score">0</span>:<span id="computer-score">0</span>
+    </div>
+
+    <div class="result">
+        <p>Paper covers rock. You win!</p>
+    </div>
+
+    <div class="choices">
+        <div class="choice" id="r">
+            <span class="emoji">🪨</span>
+        </div>
+        <div class="choice" id="p">
+            <span class="emoji">📄</span>
+        </div>
+        <div class="choice" id="s">
+            <span class="emoji">✂️</span>
+        </div>
+    </div>
+    
+        <p id="action-message">Make your move.</p>
+        <button class="back-button" onclick="goBack()">Home</button>
+   
+
+    <script>
+        var username = localStorage.getItem("username");
+        var userLabel = document.getElementById("user-label");
+        if (username) {
+            userLabel.innerText = username;
+        } else {
+            window.location.href = "index.html";
+        }
+
+         // Function to dynamically create the button and handle click event
+         function goBack() {
+            window.location.href = "index.html";
+        }
+    </script>
+  
+</body>
+</html>
