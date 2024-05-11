@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css?family=Asap:400,500,700');
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    background-color: #032144;
+}
+
+/* Header styles */
+header {
+    background-color: #f9fcff;
+    background-image: linear-gradient(147deg, #f9fcff 0%, #dee4ea 74%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Logo styles */
+.logo {
+    height: 50px;
+    margin-right: 10px;
+}
+
+/* Header h1 styles */
+header > h1 {
+    color: black;
+    font-family: Asap, sans-serif;
+    margin: 0;
+}
+
+/* Score-board styles */
+.score-board {
+    margin: 30px auto; 
+    border: 5px solid white;
+    border-radius: 6px;
+    text-align: center;
+    width: 200px;
+    font-family: 'Asap', sans-serif; 
+    font-size: 50px; 
+    color: white; 
+    padding: 15px 20px;
+    white-space: nowrap; 
+    text-overflow: ellipsis; 
+    position: relative;
+}
+
+/* Badge styles */
+.badge {
+    background: red;
+    color: white;
+    font-size: 20px;
+    padding: 2px 10px;
+    font-family: 'Asap', sans-serif;
+    font-weight: bold; 
+}
+
+/* User label styles */
+#user-label {
+    position: absolute;
+    top: 30px;
+    left: -50px;
+}
+
+/* Computer label styles */
+#computer-label {
+    position: absolute;
+    top: 30px;
+    right: -50px;
+}
+
+/* Result styles */
+.result {
+    font-size: 40px;
+    color: white;   
+}
+
+/* Result paragraph styles */
+.result > p {
+    text-align: center;
+    font-family: 'Asap', sans-serif;
+    font-weight: bold; 
+}
+
+/* Choices styles */
+.choices {
+    margin-top: 50px 0;
+    text-align: center;
+}
+
+/* Choice styles */
+.choice {
+    border: 5px solid white;
+    border-radius: 50%;
+    margin: 0 15px;
+    display: inline-block;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.choice:hover {
+    cursor: pointer;
+    background: white;
+}
+
+/* Emoji styles */
+.emoji {
+    font-size: 50px; 
+}
+
+/* Action message styles */
+#action-message {
+    text-align: center;
+    color: white;
+    font-family:'Asap', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+/* Back button styles */
+.back-button {
+    background-color: #008CBA;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    font-family: 'Asap', sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 20px auto; 
+}
+
+.back-button:hover {
+    background-color: #005f79;
+}
