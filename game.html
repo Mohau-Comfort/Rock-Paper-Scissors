@@ -1,59 +1,92 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <!-- Character encoding -->
     <meta charset="utf-8">
+    <!-- Responsive viewport settings -->
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <!-- Title -->
     <title>Rock Papers Scissors</title>
+    <!-- Favicon -->
     <link href="assets/img/RPS-Logo.ico" rel="icon">
+    <!-- Apple touch icon -->
     <link href="assets/img/RPS-Logo.png" rel="apple-touch-icon">
+    <!-- External stylesheet -->
     <link href="assets/Game/style.css" rel="stylesheet">
 </head>
 
 <body>
+<!-- Header -->
 <header>
+    <!-- Logo image -->
     <img src="assets/img/RPS-Logo.png" alt="Rock Paper Scissors Logo" class="logo"> 
+    <!-- Heading -->
     <h1>Rock Paper Scissors</h1>
 </header>
- <div class="score-board">
-        <div id="user-label" class="badge"></div> <!-- Name of user will come from the user -->
-        <div id="computer-label" class="badge">Computer</div>
-        <span id="user-score">0</span>:<span id="computer-score">0</span>
+<!-- Score board -->
+<div class="score-board">
+    <!-- User label -->
+    <div id="user-label" class="badge"></div> 
+    <!-- Computer label -->
+    <div id="computer-label" class="badge">Computer</div>
+    <!-- User and computer scores -->
+    <span id="user-score">0</span>:<span id="computer-score">0</span>
+</div>
+
+<!-- Result display -->
+<div class="result">
+    <!-- Initial result message -->
+    <p>Paper covers rock. You win!</p>
+</div>
+
+<!-- Choices -->
+<div class="choices">
+    <!-- Rock choice -->
+    <div class="choice" id="r">
+        <!-- Rock emoji -->
+        <span class="emoji">🪨</span>
     </div>
-
-    <div class="result">
-        <p>Paper covers rock. You win!</p>
+    <!-- Paper choice -->
+    <div class="choice" id="p">
+        <!-- Paper emoji -->
+        <span class="emoji">📄</span>
     </div>
-
-    <div class="choices">
-        <div class="choice" id="r">
-            <span class="emoji">🪨</span>
-        </div>
-        <div class="choice" id="p">
-            <span class="emoji">📄</span>
-        </div>
-        <div class="choice" id="s">
-            <span class="emoji">✂️</span>
-        </div>
+    <!-- Scissors choice -->
+    <div class="choice" id="s">
+        <!-- Scissors emoji -->
+        <span class="emoji">✂️</span>
     </div>
-    
-        <p id="action-message">Make your move.</p>
-        <button class="back-button" onclick="goBack()">Home</button>
-   
+</div>
 
-    <script>
-        var username = localStorage.getItem("username");
-        var userLabel = document.getElementById("user-label");
-        if (username) {
-            userLabel.innerText = username;
-        } else {
-            window.location.href = "index.html";
-        }
+<!-- Action message -->
+<p id="action-message">Make your move.</p>
 
-         // Function to dynamically create the button and handle click event
-         function goBack() {
-            window.location.href = "index.html";
-        }
-    </script>
-  
+<!-- Back button -->
+<button class="back-button" onclick="goBack()">Home</button>
+
+<!-- JavaScript file -->
+<script src="./assets/Game/app.js" charset="utf-8"></script>
+
+<!-- Script for handling username retrieval -->
+<script>
+    // Retrieve username from local storage
+    var username = localStorage.getItem("username");
+    // Get user label element
+    var userLabel = document.getElementById("user-label");
+    // Check if username exists
+    if (username) {
+        // Set user label text to username
+        userLabel.innerText = username;
+    } else {
+        // Redirect to index.html if username doesn't exist
+        window.location.href = "index.html";
+    }
+
+    // Function to navigate back to index.html
+    function goBack() {
+        window.location.href = "index.html";
+    }
+</script>
+
 </body>
 </html>

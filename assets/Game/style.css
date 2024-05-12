@@ -1,3 +1,4 @@
+/* Importing Google Fonts */
 @import url('https://fonts.googleapis.com/css?family=Asap:400,500,700');
 
 /* Reset CSS */
@@ -78,6 +79,7 @@ header > h1 {
 /* Result styles */
 .result {
     font-size: 40px;
+    text-align: center;
     color: white;   
 }
 
@@ -104,6 +106,7 @@ header > h1 {
     transition: all 0.3s ease;
 }
 
+/* Hover effect for choice */
 .choice:hover {
     cursor: pointer;
     background: white;
@@ -118,7 +121,7 @@ header > h1 {
 #action-message {
     text-align: center;
     color: white;
-    font-family:'Asap', sans-serif;
+    font-family: 'Asap', sans-serif;
     font-weight: bold;
     font-size: 20px;
     margin-top: 20px;
@@ -144,6 +147,25 @@ header > h1 {
     margin: 20px auto; 
 }
 
+/* Hover effect for back button */
 .back-button:hover {
     background-color: #005f79;
+}
+
+/* Glow effect for win */
+.green-glow {
+    border: 4px solid #4dcc7d;
+    box-shadow: 0 0 10px #31b43a;
+}
+
+/* Glow effect for lose */
+.red-glow {
+    border:4px solid #fc121b;
+    box-shadow: 0 0 10px #d01115;
+}
+
+/* Glow effect for draw */
+.yellow-glow {
+    border: 4px solid rgb(255, 255, 0);
+    border-shadow: 0 0 10px rgba(255, 255, 0, 0.76);
 }
